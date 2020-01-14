@@ -1,0 +1,16 @@
+# Action configuration script. Contains the parameters that describe the action.
+
+# Name of the action
+name: "SKIRT auto-format"
+# Description for the action
+description: "Action to automatically format C++ code using clang-format"
+# The action has (currently) no inputs
+# The outputs for the action (these can be used in subsequent workflow steps)
+outputs:
+  status:
+    description: 'Status code that indicates if formatting was performed.'
+# The action will be executed in a Docker container constructed from the
+# Dockerfile
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
